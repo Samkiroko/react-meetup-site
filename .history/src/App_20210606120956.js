@@ -7,8 +7,11 @@ import NewMeetup from './pages/NewMeetup'
 
 function App() {
   return (
-    <Layout>
+    <div>
+      <Layout></Layout>
+      <MainNavigation />
       <Switch>
+        {' '}
         <Route path='/' exact>
           <AllMeetups />
         </Route>
@@ -19,7 +22,7 @@ function App() {
           <Favorites />
         </Route>
       </Switch>
-    </Layout>
+    </div>
   )
 }
 
