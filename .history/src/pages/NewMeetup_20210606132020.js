@@ -11,8 +11,6 @@ function NewMeetup() {
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(() => {
-      history.replace('/')
     })
   }
   return (

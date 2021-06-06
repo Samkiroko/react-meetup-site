@@ -22,7 +22,7 @@ function AllMeetups() {
           meetups.push(meetup)
         }
         setIsLoading(false)
-        setLoadMeetups(meetups)
+        setLoadMeetups(data)
       })
   }, [])
 

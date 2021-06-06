@@ -1,9 +1,7 @@
 import React from 'react'
 import NewMeetupForm from '../components/meetups/NewMeetupForm'
-import { useHistory } from 'react-router-dom'
 
 function NewMeetup() {
-  const history = useHistory()
   function addMeetupHandler(meetupData) {
     fetch('https://sam-react-c-default-rtdb.firebaseio.com/meetups.json', {
       method: 'POST',
@@ -11,8 +9,6 @@ function NewMeetup() {
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(() => {
-      history.replace('/')
     })
   }
   return (

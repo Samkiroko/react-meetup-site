@@ -19,10 +19,9 @@ function AllMeetups() {
             id: key,
             ...data[key],
           }
-          meetups.push(meetup)
         }
         setIsLoading(false)
-        setLoadMeetups(meetups)
+        setLoadMeetups(data)
       })
   }, [])
 
