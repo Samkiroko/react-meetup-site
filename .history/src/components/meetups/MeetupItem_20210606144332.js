@@ -11,13 +11,7 @@ function MeetupItem(props) {
     if (itemIsFavorite) {
       favoriteCtx.removeFavorite(props.id)
     } else {
-      favoriteCtx.addFavorite({
-        id: props.id,
-        title: props.title,
-        description: props.description,
-        image: props.image,
-        address: props.address,
-      })
+      favoriteCtx.addFavorite({})
     }
   }
   return (
@@ -32,9 +26,7 @@ function MeetupItem(props) {
           <p>{props.description}</p>
         </div>
         <div className={classes.actions}>
-          <button onClick={toggleFavoriteStatusHandler}>
-            {itemIsFavorite ? 'Remove from Favorites' : 'To Favorites'}
-          </button>
+          <button>To Favorites</button>
         </div>
       </Card>
     </li>
